@@ -1,5 +1,4 @@
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -51,12 +50,11 @@ public class Main {
 
         for(int i= 0; i < M; i++){
 
-            String wordSet = br.readLine();
+            StringTokenizer st2 = new StringTokenizer(br.readLine(), ",");
 
-            String[] write = wordSet.split(",");
-
-            for(int j = 0; j < write.length; j++){
-                keyword.remove(write[j]);
+            while(st2.hasMoreTokens()){
+                String word = st2.nextToken();
+                keyword.remove(word);
             }
 
 //            Iterator<String> iterator = keyword.iterator();
